@@ -1,7 +1,6 @@
 name: Scientific Notebooks
 
 on:
-  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "20 4 1 * *"
