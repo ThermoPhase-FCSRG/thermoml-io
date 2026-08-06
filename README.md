@@ -8,7 +8,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/thermoml-io.svg)](https://pypi.org/project/thermoml-io/)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
 
-**ThermoML in, analysis-ready tables out — with the publication, experimental
+**ThermoML in, analysis-ready tables out -- with the publication, experimental
 conditions, and uncertainties kept alongside every value.**
 
 > [!IMPORTANT]
