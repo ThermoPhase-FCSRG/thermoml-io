@@ -1,0 +1,28 @@
+name: Weekly Pixi Lock Update
+
+on:
+  schedule:
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: prefix-dev/setup-pixi@v0
+        with:
+          locked: false
+      - run: pixi update --no-install
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: ci/weekly-pixi-lock
+          delete-branch: true
+          commit-message: "Update pixi lockfile"
+          title: "Update pixi lockfile"
+          body: "Automated weekly refresh of `pixi.lock`."
+          add-paths: pixi.lock

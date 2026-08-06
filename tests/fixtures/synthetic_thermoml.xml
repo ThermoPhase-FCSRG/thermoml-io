@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project-generated synthetic fixture. It contains no published data. -->
+<DataReport xmlns="http://www.iupac.org/namespaces/ThermoML">
+  <Version>
+    <nVersionMajor>2</nVersionMajor>
+    <nVersionMinor>0</nVersionMinor>
+  </Version>
+  <Citation>
+    <TRCRefID>
+      <yrYrPub>2026</yrYrPub>
+      <sAuthor1>exa</sAuthor1>
+      <sAuthor2>tes</sAuthor2>
+      <nAuthorn>0</nAuthorn>
+    </TRCRefID>
+    <eType>report</eType>
+    <eSourceType>Original</eSourceType>
+    <sDocumentOrigin>thermoml-io test suite</sDocumentOrigin>
+    <sAuthor>Example, A.</sAuthor>
+    <sAuthor>Tester, B.</sAuthor>
+    <sPubName>Synthetic Thermodynamics</sPubName>
+    <yrPubYr>2026</yrPubYr>
+    <dateCit>2026-08-05</dateCit>
+    <sTitle>Synthetic ThermoML fixture for parser verification</sTitle>
+    <sAbstract>Generated values for software tests only.</sAbstract>
+    <sKeyword>synthetic</sKeyword>
+    <eLanguage>English</eLanguage>
+    <sDOI>https://doi.org/10.0000/THERMOML-IO.SYNTHETIC</sDOI>
+    <urlCit>https://example.invalid/synthetic</urlCit>
+    <sVol>1</sVol>
+    <sPage>1-2</sPage>
+  </Citation>
+  <Compound>
+    <RegNum><nOrgNum>1</nOrgNum></RegNum>
+    <sStandardInChI>InChI=1S/CO2/c2-1-3</sStandardInChI>
+    <sStandardInChIKey>CURLTUGMZLYLDI-UHFFFAOYSA-N</sStandardInChIKey>
+    <sCommonName>carbon dioxide</sCommonName>
+    <sCommonName>CO2 gas</sCommonName>
+    <sIUPACName>carbon dioxide</sIUPACName>
+    <sCASName>carbon dioxide</sCASName>
+    <sFormulaMolec>CO2</sFormulaMolec>
+    <Sample>
+      <nSampleNm>1</nSampleNm>
+      <eSource>Commercial source</eSource>
+      <eStatus>Liquid</eStatus>
+      <purity>
+        <nStep>1</nStep>
+        <ePurifMethod>Other</ePurifMethod>
+        <sPurifMethod>Synthetic purification</sPurifMethod>
+        <nPurityMol>99.99</nPurityMol>
+        <nPurityMolDigits>4</nPurityMolDigits>
+        <nPurityVol>99.5</nPurityVol>
+        <nPurityVolDigits>3</nPurityVolDigits>
+        <eAnalMeth>Stated by supplier</eAnalMeth>
+      </purity>
+    </Sample>
+  </Compound>
+  <Compound>
+    <RegNum><nOrgNum>2</nOrgNum></RegNum>
+    <sStandardInChI>InChI=1S/H2O/h1H2</sStandardInChI>
+    <sStandardInChIKey>XLYOFNOQVPJJNP-UHFFFAOYSA-N</sStandardInChIKey>
+    <sCommonName>water</sCommonName>
+    <sFormulaMolec>H2O</sFormulaMolec>
+    <Sample>
+      <nSampleNm>1</nSampleNm>
+      <eSource>Commercial source</eSource>
+      <purity>
+        <nStep>1</nStep>
+        <nPurityMass>99.9</nPurityMass>
+        <nPurityMassDigits>3</nPurityMassDigits>
+        <nUnknownPerCent>0.1</nUnknownPerCent>
+        <eAnalMeth>Estimated by the compiler</eAnalMeth>
+      </purity>
+    </Sample>
+  </Compound>
+  <Compound>
+    <RegNum><nOrgNum>3</nOrgNum></RegNum>
+    <sCommonName>methanol</sCommonName>
+    <sFormulaMolec>CH4O</sFormulaMolec>
+    <Sample>
+      <nSampleNm>1</nSampleNm>
+      <eSource>Synthesized by the authors</eSource>
+      <purity>
+        <nStep>1</nStep>
+        <nPurityMass>98.0</nPurityMass>
+        <nPurityMassDigits>3</nPurityMassDigits>
+      </purity>
+    </Sample>
+  </Compound>
+  <PureOrMixtureData>
+    <nPureOrMixtureDataNumber>1</nPureOrMixtureDataNumber>
+    <Component><RegNum><nOrgNum>1</nOrgNum></RegNum><nSampleNm>1</nSampleNm></Component>
+    <Component><RegNum><nOrgNum>2</nOrgNum></RegNum><nSampleNm>1</nSampleNm></Component>
+    <eExpPurpose>Principal objective of the work</eExpPurpose>
+    <sCompiler>thermoml-io</sCompiler>
+    <sContributor>thermoml-io</sContributor>
+    <dateDateAdded>2026-08-05</dateDateAdded>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID>
+        <PropertyGroup>
+          <CompositionAtPhaseEquilibrium>
+            <ePropName>Mole fraction</ePropName>
+            <sMethodName>Synthetic static method</sMethodName>
+          </CompositionAtPhaseEquilibrium>
+        </PropertyGroup>
+        <RegNum><nOrgNum>1</nOrgNum></RegNum>
+      </Property-MethodID>
+      <PropPhaseID><ePropPhase>Gas</ePropPhase></PropPhaseID>
+      <ePresentation>Direct value, X</ePresentation>
+      <CombinedUncertainty>
+        <nCombUncertAssessNum>1</nCombUncertAssessNum>
+        <sCombUncertEvaluator>Fixture author</sCombUncertEvaluator>
+        <eCombUncertEvalMethod>Propagation of evaluated standard uncertainties</eCombUncertEvalMethod>
+        <nCombCoverageFactor>2</nCombCoverageFactor>
+        <nCombUncertLevOfConfid>95</nCombUncertLevOfConfid>
+      </CombinedUncertainty>
+      <PropRepeatability>
+        <sRepeatEvaluator>Fixture author</sRepeatEvaluator>
+        <eRepeatMethod>Standard deviation of the mean</eRepeatMethod>
+      </PropRepeatability>
+      <PropDeviceSpec>
+        <sDeviceSpecEvaluator>Fixture author</sDeviceSpecEvaluator>
+        <eDeviceSpecMethod>Calibrated by the experimentalist</eDeviceSpecMethod>
+        <sDeviceSpecMethod>Synthetic analyzer</sDeviceSpecMethod>
+        <nDeviceSpecLevOfConfid>95</nDeviceSpecLevOfConfid>
+      </PropDeviceSpec>
+    </Property>
+    <PhaseID><ePhase>Liquid</ePhase></PhaseID>
+    <PhaseID><ePhase>Gas</ePhase></PhaseID>
+    <Constraint>
+      <nConstraintNumber>1</nConstraintNumber>
+      <ConstraintID><ConstraintType><eTemperature>Temperature, K</eTemperature></ConstraintType></ConstraintID>
+      <ConstraintPhaseID><eConstraintPhase>Liquid</eConstraintPhase></ConstraintPhaseID>
+      <nConstraintValue>298.15</nConstraintValue>
+      <nConstrDigits>5</nConstrDigits>
+      <ConstrUncertainty>
+        <nUncertAssessNum>1</nUncertAssessNum>
+        <sUncertEvaluator>Fixture author</sUncertEvaluator>
+        <sUncertEvalMethod>Calibration certificate</sUncertEvalMethod>
+        <nStdUncertValue>0.01</nStdUncertValue>
+        <nCoverageFactor>2</nCoverageFactor>
+        <nExpandUncertValue>0.02</nExpandUncertValue>
+        <nUncertLevOfConfid>95</nUncertLevOfConfid>
+      </ConstrUncertainty>
+    </Constraint>
+    <Variable>
+      <nVarNumber>1</nVarNumber>
+      <VariableID><VariableType><ePressure>Pressure, kPa</ePressure></VariableType></VariableID>
+      <VarPhaseID><eVarPhase>Liquid</eVarPhase></VarPhaseID>
+      <VarUncertainty>
+        <nUncertAssessNum>1</nUncertAssessNum>
+        <sUncertEvaluator>Fixture author</sUncertEvaluator>
+        <sUncertEvalMethod>Calibration certificate</sUncertEvalMethod>
+        <nCoverageFactor>2</nCoverageFactor>
+        <nUncertLevOfConfid>95</nUncertLevOfConfid>
+      </VarUncertainty>
+    </Variable>
+    <NumValues>
+      <VariableValue><nVarNumber>1</nVarNumber><nVarValue>1000</nVarValue><nVarDigits>4</nVarDigits><VarUncertainty><nUncertAssessNum>1</nUncertAssessNum><nStdUncertValue>1</nStdUncertValue><nExpandUncertValue>2</nExpandUncertValue></VarUncertainty></VariableValue>
+      <PropertyValue><nPropNumber>1</nPropNumber><nPropValue>0.10</nPropValue><nPropDigits>2</nPropDigits><CombinedUncertainty><nCombUncertAssessNum>1</nCombUncertAssessNum><nCombStdUncertValue>0.005</nCombStdUncertValue><nCombExpandUncertValue>0.010</nCombExpandUncertValue></CombinedUncertainty></PropertyValue>
+    </NumValues>
+    <NumValues>
+      <VariableValue><nVarNumber>1</nVarNumber><nVarValue>2000</nVarValue><nVarDigits>4</nVarDigits></VariableValue>
+      <PropertyValue><nPropNumber>1</nPropNumber><nPropValue>0.20</nPropValue><nPropDigits>2</nPropDigits><CombinedUncertainty><nCombUncertAssessNum>1</nCombUncertAssessNum><AsymCombStdUncert><nPositiveValue>0.006</nPositiveValue><nNegativeValue>0.004</nNegativeValue></AsymCombStdUncert></CombinedUncertainty></PropertyValue>
+    </NumValues>
+    <NumValues>
+      <VariableValue><nVarNumber>1</nVarNumber><nVarValue>3000</nVarValue><nVarDigits>4</nVarDigits></VariableValue>
+      <PropertyValue><nPropNumber>1</nPropNumber><nPropValue>0.30</nPropValue><nPropDigits>2</nPropDigits><CombinedUncertainty><nCombUncertAssessNum>1</nCombUncertAssessNum><nCombExpandUncertValue>0.012</nCombExpandUncertValue></CombinedUncertainty></PropertyValue>
+    </NumValues>
+  </PureOrMixtureData>
+  <PureOrMixtureData>
+    <nPureOrMixtureDataNumber>2</nPureOrMixtureDataNumber>
+    <Component><RegNum><nOrgNum>2</nOrgNum></RegNum><nSampleNm>1</nSampleNm></Component>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID><PropertyGroup><VolumetricProp><ePropName>Mass density, kg/m3</ePropName><eMethodName>Vibrating tube method</eMethodName></VolumetricProp></PropertyGroup></Property-MethodID>
+      <PropPhaseID><ePropPhase>Liquid</ePropPhase></PropPhaseID>
+    </Property>
+    <PhaseID><ePhase>Liquid</ePhase></PhaseID>
+    <Variable><nVarNumber>1</nVarNumber><VariableID><VariableType><eTemperature>Temperature, K</eTemperature></VariableType></VariableID><VarPhaseID><eVarPhase>Liquid</eVarPhase></VarPhaseID></Variable>
+    <NumValues><VariableValue><nVarNumber>1</nVarNumber><nVarValue>298.15</nVarValue><nVarDigits>5</nVarDigits></VariableValue><PropertyValue><nPropNumber>1</nPropNumber><nPropValue>997.0</nPropValue><nPropDigits>4</nPropDigits></PropertyValue></NumValues>
+    <NumValues><VariableValue><nVarNumber>1</nVarNumber><nVarValue>308.15</nVarValue><nVarDigits>5</nVarDigits></VariableValue><PropertyValue><nPropNumber>1</nPropNumber><nPropValue>994.0</nPropValue><nPropDigits>4</nPropDigits></PropertyValue></NumValues>
+  </PureOrMixtureData>
+  <PureOrMixtureData>
+    <nPureOrMixtureDataNumber>3</nPureOrMixtureDataNumber>
+    <Component><RegNum><nOrgNum>1</nOrgNum></RegNum></Component>
+    <Component><RegNum><nOrgNum>2</nOrgNum></RegNum></Component>
+    <Component><RegNum><nOrgNum>3</nOrgNum></RegNum></Component>
+    <Property>
+      <nPropNumber>1</nPropNumber>
+      <Property-MethodID><PropertyGroup><RefractionSurfaceTensionSoundSpeed><ePropName>Interfacial tension, N/m</ePropName><eMethodName>Pendant drop shape</eMethodName></RefractionSurfaceTensionSoundSpeed></PropertyGroup></Property-MethodID>
+      <PropPhaseID><ePropPhase>Liquid</ePropPhase></PropPhaseID>
+    </Property>
+    <PhaseID><ePhase>Liquid</ePhase></PhaseID>
+    <PhaseID><ePhase>Gas</ePhase></PhaseID>
+    <Variable><nVarNumber>1</nVarNumber><VariableID><VariableType><eTemperature>Temperature, K</eTemperature></VariableType></VariableID></Variable>
+    <NumValues><VariableValue><nVarNumber>1</nVarNumber><nVarValue>310.0</nVarValue><nVarDigits>4</nVarDigits></VariableValue><PropertyValue><nPropNumber>1</nPropNumber><nPropValue>0.050</nPropValue><nPropDigits>2</nPropDigits></PropertyValue></NumValues>
+  </PureOrMixtureData>
+</DataReport>

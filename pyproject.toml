@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thermoml-io"
+version = "0.1.0"
+description = "Faithful, provenance-aware ThermoML ingestion, search, and tabular export"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "BSD-3-Clause"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "docs/licensing.md"]
+authors = [
+  { name = "Diego Volpatto", email = "volpatto@lncc.br" },
+  { name = "Antonio Marinho", email = "marinhoengenharias@gmail.com" },
+  { name = "Gustavo Ribeiro", email = "ggrbill@gmail.com" },
+]
+keywords = [
+  "FAIR-data",
+  "ThermoML",
+  "experimental-data",
+  "thermodynamics",
+  "uncertainty",
+  "XML",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Typing :: Typed",
+]
+dependencies = [
+  "defusedxml>=0.7,<1",
+  "xmlschema>=4.3,<5",
+  "citationlib==0.2.1",
+]
+
+[project.optional-dependencies]
+yaml = [
+  "pyyaml>=6",
+]
+parquet = [
+  "pyarrow>=15",
+]
+pandas = [
+  "pandas>=2.2",
+]
+export = [
+  "pyarrow>=15",
+  "pyyaml>=6",
+]
+
+[project.urls]
+Homepage = "https://github.com/ThermoPhase-FCSRG/thermoml-io"
+Documentation = "https://thermophase-fcsrg.github.io/thermoml-io"
+Repository = "https://github.com/ThermoPhase-FCSRG/thermoml-io"
+Issues = "https://github.com/ThermoPhase-FCSRG/thermoml-io/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/thermoml_io"]
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+  "src",
+  "CITATION.cff",
+  "THIRD_PARTY_NOTICES.md",
+  "docs/licensing.md",
+  "docs/references.md",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+markers = [
+  "external: accesses live external ThermoML resources",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["thermoml_io"]
+
+[tool.coverage.report]
+fail_under = 99
+show_missing = true
+skip_covered = true
+exclude_also = [
+  "if TYPE_CHECKING:",
+]

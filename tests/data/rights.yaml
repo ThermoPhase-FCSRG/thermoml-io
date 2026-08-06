@@ -1,0 +1,7 @@
+schema_version: 1
+artifacts:
+  - path: tests/fixtures/synthetic_thermoml.xml
+    status: generated
+    source: thermoml-io test suite
+    basis: Project-generated synthetic values and metadata; no published experimental data.
+    license: BSD-3-Clause

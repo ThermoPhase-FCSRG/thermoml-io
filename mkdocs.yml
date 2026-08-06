@@ -1,0 +1,93 @@
+site_name: thermoml-io
+site_description: Faithful, provenance-aware ThermoML ingestion, search, and tabular export
+site_url: https://thermophase-fcsrg.github.io/thermoml-io/
+repo_url: https://github.com/ThermoPhase-FCSRG/thermoml-io
+repo_name: ThermoPhase-FCSRG/thermoml-io
+edit_uri: edit/main/docs/
+strict: true
+
+theme:
+  name: material
+  language: en
+  logo: assets/branding/thermophase-horizontal.png
+  favicon: assets/branding/thermophase-horizontal.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_root_heading: true
+            show_symbol_type_heading: true
+            show_signature_annotations: true
+            members_order: source
+            filters:
+              - "!^_"
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/thermophase.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ThermoPhase-FCSRG/thermoml-io
+      name: thermoml-io on GitHub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/thermoml-io/
+      name: thermoml-io on PyPI
+
+copyright: thermoml-io contributors · ThermoPhase research group · LNCC · UDESC
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Scientific data model: data-model.md
+  - Search and ranking: search.md
+  - Bulk archive analysis: archive.md
+  - Upstream fetch and registry: upstream.md
+  - Tables and export: tables.md
+  - Provenance and data rights: licensing.md
+  - References: references.md
+  - API:
+      - Overview: api/index.md
+      - Parsing and models: api/parsing-models.md
+      - Search, analysis, and tables: api/search-tables.md
+  - Development: contributing.md

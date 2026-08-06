@@ -1,0 +1,62 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+
+- repo: https://github.com/srstevenson/nb-clean
+  rev: 4.0.1
+  hooks:
+    - id: nb-clean
+      # Only runs on notebooks/* ipynb files
+      files: ^notebooks/.*\.ipynb$
+      args:
+        - --remove-empty-cells
+        - --preserve-cell-outputs
+        - --preserve-execution-counts
+        - --preserve-cell-metadata
+        - tags
+        - slideshow
+        - --
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.11.12
+  hooks:
+    # Run the linter.
+    - id: ruff
+      args: [ --fix ]
+      exclude: ^notebooks/
+    # Run the formatter.
+    - id: ruff-format
+      exclude: ^notebooks/
+
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.9.1
+  hooks:
+    - id: nbqa-black
+      args: [--quiet]
+      files: ^notebooks/.*\.ipynb$
+    - id: nbqa-ruff
+      # Markdown title cells replace module docstrings, helper functions are not
+      # public APIs, bare expressions render rich output, and cell-local imports
+      # intentionally follow setup cells. Their rule exceptions are centralized
+      # in .ruff.toml.
+      args:
+        - --fix
+      files: ^notebooks/.*\.ipynb$
+
+- repo: local
+  hooks:
+    - id: jupytext-sync
+      name: jupytext-sync
+      entry: python scripts/sync_notebooks.py
+      language: python
+      additional_dependencies:
+        - jupytext>=1.19.1,<2
+      pass_filenames: false
+      files: '^notebooks/.*\.(ipynb|py)$'

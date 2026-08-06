@@ -1,0 +1,90 @@
+[workspace]
+name = "thermoml-io"
+version = "0.1.0"
+description = "Faithful, provenance-aware ThermoML ingestion, search, and tabular export"
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64", "win-64"]
+
+[dependencies]
+python = ">=3.11"
+
+[feature.core.dependencies]
+python = ">=3.11,<3.15"
+defusedxml = ">=0.7,<1"
+xmlschema = ">=4.3,<5"
+
+[feature.core.pypi-dependencies]
+citationlib = "==0.2.1"
+thermoml-io = { path = ".", editable = true }
+
+[feature.yaml.dependencies]
+pyyaml = ">=6"
+
+[feature.parquet.dependencies]
+pyarrow = ">=15"
+
+[feature.pandas.dependencies]
+pandas = ">=2.2"
+
+[feature.export.dependencies]
+pyarrow = ">=15"
+pyyaml = ">=6"
+
+[feature.test.dependencies]
+hypothesis = ">=6.116"
+pytest = ">=8"
+pytest-cov = ">=5"
+
+[feature.dev.dependencies]
+mypy = ">=1.10"
+pre-commit = ">=3.7"
+python-build = ">=1.2"
+ruff = ">=0.11"
+twine = ">=5"
+
+[feature.dev.pypi-dependencies]
+types-defusedxml = ">=0.7"
+
+[feature.notebooks.dependencies]
+ipykernel = ">=6.29"
+jupyterlab = ">=4"
+jupytext = ">=1.17,<2"
+matplotlib-base = ">=3.8"
+nbconvert = ">=7.16"
+
+[feature.docs.dependencies]
+mkdocs = ">=1.6,<2"
+mkdocs-material = ">=9.5"
+
+[feature.docs.pypi-dependencies]
+mkdocstrings = { version = ">=0.27", extras = ["python"] }
+
+[tasks]
+lint = "ruff check src tests scripts notebooks/*.py"
+format = "ruff format src tests scripts notebooks/*.py"
+format-check = "ruff format --check src tests scripts notebooks/*.py"
+typecheck = "mypy"
+test = "pytest -q"
+test-cov = "pytest -q --cov=thermoml_io --cov-branch --cov-report=term-missing --cov-report=xml"
+notebooks-sync = "python scripts/sync_notebooks.py"
+notebooks-run = "python scripts/run_notebooks.py"
+precommit = "pre-commit run --all-files"
+build = "python -m build"
+check-dist = "python scripts/check_distribution.py dist/*"
+check-data-rights = "python scripts/check_data_rights.py"
+update-upstream = "python scripts/update_upstream.py"
+docs-check = "mkdocs build --strict"
+local-docs = "mkdocs serve"
+bump-version = "python scripts/bump_version.py"
+sync-deps = "python scripts/sync_deps.py"
+sync-deps-check = "python scripts/sync_deps.py --check"
+
+[environments]
+default = { features = ["core", "dev", "test", "export", "pandas"], solve-group = "core" }
+test = { features = ["core", "test", "export", "pandas"], solve-group = "core" }
+notebooks = { features = ["core", "notebooks", "export", "pandas"], solve-group = "notebooks" }
+docs = { features = ["core", "docs"], solve-group = "docs" }
+yaml = { features = ["core", "yaml"], solve-group = "core" }
+parquet = { features = ["core", "parquet"], solve-group = "core" }
+pandas = { features = ["core", "pandas"], solve-group = "core" }
+export = { features = ["core", "export"], solve-group = "core" }

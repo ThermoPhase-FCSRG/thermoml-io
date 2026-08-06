@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use thermoml-io, cite the software and the original publications represented by each ThermoML document."
+title: "thermoml-io"
+type: software
+version: 0.1.0
+date-released: 2026-08-05
+authors:
+  - family-names: Volpatto
+    given-names: Diego
+    email: volpatto@lncc.br
+  - family-names: Marinho
+    given-names: Antonio
+    email: marinhoengenharias@gmail.com
+  - family-names: Ribeiro
+    given-names: Gustavo
+    email: ggrbill@gmail.com
+license: BSD-3-Clause
+repository-code: "https://github.com/ThermoPhase-FCSRG/thermoml-io"
+url: "https://thermophase-fcsrg.github.io/thermoml-io"
+keywords:
+  - ThermoML
+  - thermodynamics
+  - experimental data
+  - uncertainty
+  - FAIR data

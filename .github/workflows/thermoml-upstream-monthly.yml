@@ -1,0 +1,51 @@
+name: Monthly ThermoML Upstream Refresh
+
+on:
+  schedule:
+    - cron: "35 5 2 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install Pixi
+        uses: prefix-dev/setup-pixi@v0
+        with:
+          environments: default
+
+      - name: Discover NIST bulk snapshot and live Cordra IDs
+        run: pixi run -e default update-upstream
+
+      - name: Reinstall package with refreshed registries
+        run: pixi reinstall -e default
+
+      - name: Validate registry and package
+        run: |
+          pixi run -e default test
+          pixi run -e default check-data-rights
+
+      - name: Open a reviewable update pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: ci/monthly-thermoml-upstream
+          delete-branch: true
+          commit-message: "Update pinned ThermoML upstream metadata"
+          title: "Update pinned ThermoML upstream metadata"
+          body: |
+            Automated monthly comparison with both the NIST PDR NERDm bulk
+            record and the live NIST ThermoML Cordra identifier census.
+
+            The pull request changes metadata only. ThermoML archive bytes are
+            not committed or redistributed.
+          add-paths: |
+            src/thermoml_io/data/archive_sources.json
+            src/thermoml_io/data/cordra_snapshot.json

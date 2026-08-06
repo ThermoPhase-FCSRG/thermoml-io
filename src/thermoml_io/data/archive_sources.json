@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "nist": {
+      "metadata_url": "https://data.nist.gov/od/id/mds2-2422",
+      "record_id": "ark:/88434/mds2-2422",
+      "record_version": "1.2.6",
+      "record_modified": "2021-03-05 00:00:00",
+      "doi": "doi:10.18434/mds2-2422",
+      "archive": {
+        "filename": "ThermoML.v2020-09-30.tgz",
+        "download_url": "https://data.nist.gov/od/ds/mds2-2422/ThermoML.v2020-09-30.tgz",
+        "media_type": "application/gzip",
+        "size_bytes": 189433115,
+        "sha256": "231161b5e443dc1ae0e5da8429d86a88474cb722016e5b790817bb31c58d7ec2",
+        "snapshot_date": "2020-09-30",
+        "description": "corresponds to the state of the archive as of 2020-09-30, which contains ThermoML entries published through the 2019 calendar year. The date of the extraction from TRC databases, as specified in the dateCit field of the xml files, are 2020-09-29 and 2020-09-30.  The .tgz file contains a directory tree that maps to the DOI prefix/suffix of the entries; e.g. unzipping the .tgz file creates a directory for each of the prefixes ( 10.1007, 10.1016, and 10.1021) that contains all the .json and .xml files."
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "iupac-thermoml-v4-use-cases": {
+      "title": "Supporting information for Extension of ThermoML: the IUPAC standard for thermodynamic data communications",
+      "organization": "International Union of Pure and Applied Chemistry (IUPAC)",
+      "project_url": "https://iupac.org/project/2007-039-1-024/",
+      "publication_doi": "10.1351/PAC-REC-11-05-01",
+      "artifact_url": "https://iupac.org/publications/pac/pdf/pdf_supplementary_material/s8310x1937.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 688532,
+      "sha256": "b3f7e3c6332a79f710a4abd7c156b977485757bd7cbc1fc387f57bfa3b7a2298",
+      "thermoml_version": "4.0",
+      "use_case_count": 14,
+      "purpose": "External schema and use-case corpus for parser conformance work; not NIST experimental data.",
+      "included_by_default": false,
+      "experimental_query_eligible": false
+    }
+  }
+}

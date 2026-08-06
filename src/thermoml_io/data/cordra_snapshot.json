@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "api_url": "https://trc.nist.gov/ThermoML-API/objects",
+    "query": "type:TRCTml4",
+    "object_type": "TRCTml4",
+    "object_count": 11922,
+    "identifiers_sha256": "61ec946a139fcec0d1fac7627787630b60a745b5ff4a8fae3946e2dde32f4639",
+    "first_identifier": "20.5000.trc.thermoml/10.1007/s10765-005-5566-6",
+    "last_identifier": "20.5000.trc.thermoml/10.1021/je901097n"
+  }
+}
