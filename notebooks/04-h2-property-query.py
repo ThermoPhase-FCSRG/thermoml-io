@@ -274,9 +274,7 @@ MARKERS = ("o", "s", "^", "D", "v", "P", "X", "<", ">", "*")
 def primary_complementary_condition(
     raw_conditions: str, independent_name: str
 ) -> tuple[float | None, str]:
-    target = (
-        "pressure" if "temperature" in independent_name.casefold() else "temperature"
-    )
+    target = "pressure" if "temperature" in independent_name.casefold() else "temperature"
     conditions = json.loads(raw_conditions)
     for condition in conditions:
         if target in str(condition["name"]).casefold():
@@ -293,9 +291,7 @@ def plot_query(label: str, result) -> None:
     frame["y"] = pd.to_numeric(frame["value"])
     frame["publication_identity"] = frame["doi"].fillna(frame["source_sha256"])
     frame["publication"] = frame["citation_authors_year"]
-    collisions = frame.groupby("publication")["publication_identity"].transform(
-        "nunique"
-    )
+    collisions = frame.groupby("publication")["publication_identity"].transform("nunique")
     frame.loc[collisions > 1, "publication"] += (
         " [" + frame.loc[collisions > 1, "publication_identity"] + "]"
     )
@@ -324,9 +320,7 @@ def plot_query(label: str, result) -> None:
             publication: MARKERS[index % len(MARKERS)]
             for index, publication in enumerate(publications)
         }
-        numeric_conditions = pd.to_numeric(
-            selected["complementary_value"], errors="coerce"
-        )
+        numeric_conditions = pd.to_numeric(selected["complementary_value"], errors="coerce")
         finite_conditions = numeric_conditions.dropna()
         lower = float(finite_conditions.min()) if not finite_conditions.empty else 0.0
         upper = float(finite_conditions.max()) if not finite_conditions.empty else 1.0
@@ -417,9 +411,7 @@ csv_manifest = pd.DataFrame(
         {
             "query": label,
             "CSV": str(
-                result.write_csv(LOCAL_EXPORT / "h2" / f"{label}.csv").relative_to(
-                    PROJECT_ROOT
-                )
+                result.write_csv(LOCAL_EXPORT / "h2" / f"{label}.csv").relative_to(PROJECT_ROOT)
             ),
             "rows": len(result.analysis_table.rows),
             "columns": len(result.analysis_table.columns),

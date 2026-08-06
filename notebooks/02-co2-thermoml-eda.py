@@ -79,9 +79,7 @@ COMPONENT_LABEL = "carbon dioxide"
 COMPONENT_FORMULA = "CO2"
 COMPONENT_INCHIKEY = "CURLTUGMZLYLDI-UHFFFAOYSA-N"
 archive_source = get_archive_source()
-ARCHIVE_PATH = fetch_thermoml_archive(
-    cache_dir=PROJECT_ROOT / "notebooks/local-only/archive"
-)
+ARCHIVE_PATH = fetch_thermoml_archive(cache_dir=PROJECT_ROOT / "notebooks/local-only/archive")
 display(
     pd.DataFrame(
         [
@@ -183,10 +181,7 @@ for field, title in RANKINGS:
 
 # %%
 component_counts = pd.DataFrame(
-    [
-        {"component": item.label, "observations": item.count}
-        for item in summary.components
-    ]
+    [{"component": item.label, "observations": item.count} for item in summary.components]
 )
 target_count = int(
     component_counts.loc[

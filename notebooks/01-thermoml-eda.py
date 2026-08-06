@@ -82,9 +82,7 @@ print(
 
 # %%
 archive_source = get_archive_source()
-ARCHIVE_PATH = fetch_thermoml_archive(
-    cache_dir=PROJECT_ROOT / "notebooks/local-only/archive"
-)
+ARCHIVE_PATH = fetch_thermoml_archive(cache_dir=PROJECT_ROOT / "notebooks/local-only/archive")
 display(
     pd.DataFrame(
         [
@@ -228,9 +226,7 @@ recovery_frame = pd.DataFrame(
             "XML SHA-256": item.xml_sha256,
             "JSON SHA-256": item.json_sha256,
             "XML error": item.error_message,
-            "XML lexical decimals preserved": (
-                item.lexical_numeric_representation_preserved
-            ),
+            "XML lexical decimals preserved": (item.lexical_numeric_representation_preserved),
         }
         for item in analysis.recoveries
     ]
