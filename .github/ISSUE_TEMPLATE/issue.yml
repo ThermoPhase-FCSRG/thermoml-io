@@ -1,0 +1,23 @@
+name: Issue
+description: Report a problem or propose a change.
+title: "[Issue]: "
+body:
+  - type: dropdown
+    id: expected-impact
+    attributes:
+      label: Expected Impact
+      description: Select the expected impact of this issue.
+      options:
+        - Minor
+        - Regular
+        - Major
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: Provide a brief description of the issue.
+      placeholder: Describe the issue, motivation, or observed problem.
+    validations:
+      required: true
