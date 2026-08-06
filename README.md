@@ -5,6 +5,7 @@
 [![Supported OS](https://img.shields.io/badge/OS-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/ThermoPhase-FCSRG/thermoml-io/actions/workflows/tests.yml)
 [![Docs](https://github.com/ThermoPhase-FCSRG/thermoml-io/actions/workflows/docs.yml/badge.svg)](https://thermophase-fcsrg.github.io/thermoml-io/)
 [![PyPI](https://img.shields.io/pypi/v/thermoml-io.svg)](https://pypi.org/project/thermoml-io/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21825084.svg)](https://doi.org/10.5281/zenodo.21825084)
 [![Python](https://img.shields.io/pypi/pyversions/thermoml-io.svg)](https://pypi.org/project/thermoml-io/)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
 
