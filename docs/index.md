@@ -102,3 +102,26 @@ construction explicitly.
 Version 0.1 decodes pure-compound and mixture datasets. Reaction datasets are
 detected and counted, but their typed representation is planned for a later
 release. This limitation is reported explicitly on each document.
+
+## How to cite
+
+If you use `thermoml-io` in research, please cite its all-versions Zenodo
+record:
+
+> Volpatto, Diego; Marinho, Antonio; Ribeiro, Gustavo (2026). *thermoml-io*.
+> Zenodo. [https://doi.org/10.5281/zenodo.21825084](https://doi.org/10.5281/zenodo.21825084)
+
+```bibtex
+@software{volpatto_thermoml_io_2026,
+  author = {Volpatto, Diego and Marinho, Antonio and Ribeiro, Gustavo},
+  title = {thermoml-io},
+  year = {2026},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.21825084},
+  url = {https://doi.org/10.5281/zenodo.21825084}
+}
+```
+
+This concept DOI always refers to the project as a whole and resolves to its
+latest archived release. For exact reproducibility, cite the version-specific
+DOI shown on the corresponding Zenodo release instead.
