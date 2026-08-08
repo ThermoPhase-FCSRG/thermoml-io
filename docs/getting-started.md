@@ -2,11 +2,27 @@
 
 ## Install
 
+Install from Conda-Forge:
+
+```bash
+conda install -c conda-forge thermoml-io
+```
+
+The Conda-Forge package includes the dependencies for YAML and Parquet export.
+For pandas integration, add pandas to the same environment:
+
+```bash
+conda install -c conda-forge thermoml-io pandas
+```
+
+Alternatively, install the core package from PyPI:
+
 ```bash
 pip install thermoml-io
 ```
 
-For every exporter and pandas integration:
+With PyPI, install every exporter and pandas integration through the package
+extras:
 
 ```bash
 pip install "thermoml-io[export,pandas]"
