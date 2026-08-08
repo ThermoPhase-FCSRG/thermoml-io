@@ -54,13 +54,27 @@ Python distributions.
 
 ## Installation
 
-Install the core parser and search API:
+Install from Conda-Forge:
+
+```bash
+conda install -c conda-forge thermoml-io
+```
+
+The Conda-Forge package includes the dependencies for YAML and Parquet export.
+Add pandas to the same environment for DataFrame integration:
+
+```bash
+conda install -c conda-forge thermoml-io pandas
+```
+
+Alternatively, install the core parser and search API from PyPI:
 
 ```bash
 pip install thermoml-io
 ```
 
-Install all tabular exporters and pandas integration:
+With PyPI, install all tabular exporters and pandas integration through the
+package extras:
 
 ```bash
 pip install "thermoml-io[export,pandas]"
